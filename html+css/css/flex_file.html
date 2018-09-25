@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div class="bigbox">
+ 		 <div class="box" style="background:coral;">box1</div>
+ 		 <div class="box" style="background:lightblue;">box2</div> 
+ 		 <div class="box" style="background:lightgreen;">box3</div>
+		</div>
+		<style type="text/css">
+	  .bigbox {
+				display: flex;/*分配子元素如何分配空间*/
+
+				width: 200px;
+				height: 200px;
+				background: orange;
+				/*flex-wrap: wrap;
+				/*flex-flow:row-reverse wrap;*/
+				/*align-content:space-between 往两边靠拢*/;
+				/*align-content: space-around; 各行之前之间之后留余空白*/ 
+				/*align-items: center; 与flex：1配合使用，*/
+				}
+		.bigbox div{
+			flex-basis: 100px;
+		/*flex:1;
+		/*width:40px;*/
+		/*height:50px;*/
+		}
+		.bigbox div:nth-of-type(1){
+			flex-shrink:1;
+			}
+		.bigbox div:nth-of-type(2){
+			flex-shrink:1 ;
+		}
+		.bigbox div:nth-of-type(3){
+			flex-shrink: 2;
+		}	
+	    </style>
+       </body>
+
+</html>

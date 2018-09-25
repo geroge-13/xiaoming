@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div class="circle">
+		<a href="#">
+			<div class="wrap"></div>
+	    <div class="box">
+	    <div class="small"></div>
+	    <img src="img/7.jpg"/>
+	    <!--<div class="wrap"></div>-->
+	    </div>
+		<div class="info"></div>
+		</a>
+		</div>
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+			<div class="circle">
+		<a href="#">
+	    <div class="box-one">
+	    <div class="small"></div>
+	    <img src="img/7.jpg"/>
+	    </div>
+		<div class="info"></div>
+		</a>
+		</div>
+		<style type="text/css">
+			.circle{
+				position: relative;
+				width: 220px;
+				height: 220px;
+				border-radius: 50%;
+				box-sizing: border-box;
+			}
+			.info{
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background: #008000;
+				border-radius: 50%;
+				backface-visibility: hidden;
+				z-index: -5;
+			}
+			.circle img{
+				width: 100%;
+				height: 100%;
+				border-radius: 50%;
+				vertical-align: middle
+				border: 5px solid ;
+				}
+			.small{
+				content: "";
+				width: 100%;
+				height:100%;
+				border-radius:50%;
+				display: block;
+				box-shadow:inset 0 0 0 18px rgba(255, 255, 255, 0.6),
+				 0 1px 2px rgba(0, 0, 0, 0.3);
+				transition: all .4s;
+				position: absolute;
+			
+				}
+			 .wrap{
+				/*content: '';*/
+    			width: 8px;
+    			height: 8px;
+   				 position: absolute;
+   				 border-radius: 50%;
+    			top: 40%;
+   				 left: 96%;
+   				 margin: -4px 0 0 -4px;
+    			background: rgba(0, 0, 0, 0.8);
+    			box-shadow: 0 0 1px rgba(255, 255, 255, 0.9);
+				z-index: 2;
+			}
+			.box:hover{
+				transform-origin: 95% 40%;
+				transform: rotate(-85deg);
+				transition: 1.5s ;
+			}
+			.box-one{
+				z-index: 11;
+				transform: scale(1);
+				transform-origin: 50% 0;
+			}
+			.box-one:hover{
+				transform: scale(0.7);
+				transition: all .5s;
+			}
+			
+		</style>
+	</body>
+</html>
