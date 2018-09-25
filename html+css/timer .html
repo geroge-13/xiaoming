@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+</style>
+<body>
+    <input type="button" value="开始计数" onclick="dotimer()">
+    <input type="text" id="txt">
+    <input type="button" value="停止计数" onclick="stoptime()">
+    <script type="text/javascript">
+    var c =0;
+    var t;
+    var timer_is_on =0;
+    function timecount(){
+        document.getElementById('txt').value=c;
+        c++;
+        t=setTimeout(function() {
+            timecount();
+        }, 100);
+    }
+
+    function dotimer(){
+        if(!timer_is_on ){
+            time_is_on = 1;
+            timecount();
+        }
+    }
+
+    function stoptime(){
+        clearTimeout(t);
+        timer_is_on = 0;
+    }
+        var name ='world' ;(function(){
+            if(typeof name ==='underfined'){
+                var name='jack'
+                console.log('goodbye' +name) ;
+            
+            }else {
+                console.log('hello'+name);
+            }
+        })
+
+        
+    </script>
+</body>
+</html>
