@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+ <div class="bigbox"> 
+<div class="box"></div>
+ </div> 
+<style type="text/css">
+.bigbox{
+     width: 600px;
+    height: 500px; 
+    background: lightcyan;
+     position: relative; 
+}
+.box{
+    width: 80px;
+    height: 80px;
+    background: rosybrown;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+</style>
+<script type="text/javascript">
+    var box = document.querySelector('.box');
+    document.querySelector('.box').onclick = function (event) {
+        console.log(event.offsetX + ' ' + event.offsetY);
+    }
+    document.body.onkeydown = function (ev) {
+				console.log(ev.keyCode);
+                switch(ev.keyCode){
+    case 37 :
+    boxone ();
+     break;
+  
+    case 38 :
+    boxthree ();
+     break;
+  
+    case 39 :
+     boxMove ();
+     break;
+  
+    case 40 :
+    boxtwe ();
+     break;
+				}
+            }
+            var left =0;
+     var boxMove =function () {
+
+         left +=10 ;
+         box.style.left = left + 'px' ;
+        }
+
+     var boxone =function () {
+        left -=10 ;
+         box.style.left = left + 'px' ;
+        }
+
+        var boxtwe =function () {  
+        left +=10 ;
+         box.style.top = left + 'px' ;
+        }
+
+        var boxthree =function () {
+        left -=10 ;
+         box.style.top = left + 'px' ;
+        }
+        setInterval (function () {
+            boxMove () ;
+        },1000)  
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+#backgroud {
+  background-image: url(../images/111.png);
+  width: 650px;
+  height: 600px;
+  margin: 0 auto;
+  padding: 1px solid red;
+  position: relative;
+}
+#backgroud #rotate {
+  position: absolute;
+  left: 116px;
+  top: 60px;
+  width: 450px;
+  height: 450px;
+}
+#backgroud #pointer {
+  width: 116px;
+  height: 128px;
+  position: absolute;
+  left: 40%;
+  top: 25%;
+  z-index: 3;
+}

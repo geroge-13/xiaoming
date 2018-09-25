@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>botton</title>
+    <script src="jquery.js" type="text/javascript" charset="utf-8"></script>
+</head>
+</head>
+<body>
+    <div class="botton">
+        <span>html.css1</span>
+        <i></i>
+    </div>
+    <style type="text/css">
+    .botton{
+        position: relative;
+        display: inline-block;
+        width: 200px;
+        height: 50px;
+        background: orange;
+        overflow: hidden;
+        z-index: 1;
+        border-radius: 10px;
+        margin: 0 auto;
+    }
+    span{
+        display: block;
+        text-align: center;
+        line-height: 30px;
+        color: azure;
+    }
+    span+i {
+         content: '';
+        display: block;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: rebeccapurple;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transform: scale(0);
+        transition: transform .5s;
+    }
+    span.active+i{
+        transform: scale(4)
+    }
+    </style>
+    <script>
+    $('span').hover(function(ev){
+        $('span+i').css({
+            top: (ev.clientY-$('span').offset().top-50),
+            left: (ev.clientX-$('span').offset().left-50)
+        })
+        $('span').addClass('active');
+        console.log((ev.clientX - $('span').offset().left) + '/' + (ev.clientY - $('span').offset().top))
+    },function(){
+        $('span').removeClass('active');
+    })
+    </script>
+</body>
+</html>
