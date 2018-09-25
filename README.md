@@ -6,3 +6,4 @@
  https://geroge-13.github.io/xiaoming.github.io/html+css/jq-ajax.html  ajax
  https://geroge-13.github.io/xiaoming.github.io/box.html 城市二级选项
  https://geroge-13.github.io/xiaoming.github.io/html+css/3d.html 3d旋转
+ https://geroge-13.github.io/xiaoming.github.io/html+css/timer.html 计时器
