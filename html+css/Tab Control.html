@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选项卡</title>
+    <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+    <div class="tab">
+    <div class="tab-menu">
+        <ul>
+            <li class="on">威少</li>
+            <li>保罗乔治</li>
+            <li>杜兰特</li>
+        </ul>
+    </div>
+    <div class="tab-box">
+        <div><h1>雷霆队进攻核心</h1>
+        <p>1988年11月12日出生于美国加利福尼亚州长滩（Long Beach, CA），美国职业篮球运动员，司职控球后卫，效力于NBA俄克拉荷马城雷霆队。[1]拉塞尔·威斯布鲁克于2008年通过选秀进入NBA，新秀赛季入选最佳新秀阵容第一阵容，2016-17赛季当选常规赛MVP；7次入选全明星阵容，2015、2016连续两年获得全明星赛MVP；2次入选最佳阵容第一阵容，5次入选最佳阵容第二阵容。拉塞尔·威斯布鲁克于2010年随美国队获得土耳其篮球世锦赛冠军，2012年随美国男篮获得伦敦奥运会冠军
+        </p>
+        </div>
+        <div><h1>雷霆队防守核心</h1>
+        <p>保罗·乔治2010年通过选秀进入NBA，先后效力于印第安纳步行者队和雷霆队，2010-11赛季入选最佳新秀阵容第二阵容；2012-13赛季当选常规赛最快进步队员，入选最佳阵容第三阵容和最佳防守阵容第二阵容；2013-14赛季入选最佳阵容第三阵容和最佳防守阵容第一阵容2015-16赛季入选最佳阵容第三阵容和最佳防守阵容第二阵容5次入选全明星阵容
+ 2014年7月，保罗·乔治入选美国男篮国家队集训名单；2016年8月，保罗·乔治代表美国男篮国家队出战里约奥运会，随队获得冠军。2018年7月1日，保罗-乔治续约雷霆。
+        </p>
+        </div>
+        <div><h1>勇士队当家核心</h1>
+        <p>1988年9月29日出生于美国华盛顿哥伦比亚特区（Washington,District of Columbia），美国职业篮球运动员，司职小前锋，效力于NBA金州勇士队。杜兰特在2007年选秀首轮第二顺位被西雅图超音速队选中，2008年随球队搬迁到俄克拉何马州。2014年，杜兰特同时荣膺NBA得分王与MVP。2016年7月4日，杜兰特决定加盟金州勇士队。2017年6月13日，勇士总比分4-1击败骑士，夺得2016-17赛季NBA总冠军。杜兰特收获生涯首冠，并荣膺FMVP。
+        </p>
+        </div>
+    </div>
+    </div>
+    <style type="text/css">
+    *{
+        list-style: none;
+        margin: 0;
+    }
+    .tab{
+        width: 300px;
+        margin: 0 auto;
+    }
+    .tab-menu{
+        width: 300px;
+        height: 30px;
+        border: 1px solid blueviolet;
+      position: relative;
+    }
+  ul{
+      width: 300px;
+      position: absolute;
+      top: 0;
+      left: -40px;
+  }
+    li {
+       text-align: center;
+        width: 98px;
+        height: 30px;
+        border: 1px solid red;
+        float: left;
+    }
+    ul li.on{
+        background: lightblue;
+    }
+    .tab-box > div{
+        width: 300px;
+        height: 400px;
+        border: solid brown;
+        border-width: 0 1px 1px 1px;
+        display: none;
+        background: lightpink;
+    }
+    .tab-box > div:first-child {
+        display: block;
+    }
+    h1{
+        text-align: center;
+        color: chocolate;
+    }
+    p{
+        text-align: center;
+        line-height: 28px;
+        font-size: 1em;
+    }
+    </style>
+    <script>
+    $(function() {
+        $(".tab-menu ul li").click(function(){
+            $(this).addClass("on").siblings().removeClass("on");
+            var index = $(this).index();
+            $(".tab-box > div").eq(index).show().siblings().hide();
+        });
+    });
+    </script>
+</body>
+</html>
