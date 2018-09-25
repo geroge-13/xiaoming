@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jq-ajax</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+                <div class="col-xs-3 col001"></div>
+                <div class="col-xs-3 col002"></div>
+                <div class="col-xs-3 col003"></div>
+                <div class="col-xs-3 col004"></div>          
+        </div>
+        <button type="button" class="btn btn-danger center-block" onclick="getdate()">（危险）Danger</button>
+    </div>
+
+    <div class="demo"></div>
+    <img src="" alt="">
+    <style type="text/css">
+    img{
+      border: 1px solid orange;
+    }
+    container{
+        background: lightsalmon;
+    }
+    </style>
+    <script>
+    var pagenum=1;
+    
+
+    function getdate(){
+        $.get("https://www.apiopen.top/meituApi",{
+            'page':pagenum,
+},
+            function(shuju,textStatus,xhr){
+                console.log(shuju)
+                console.log(textStatus)
+                console.log(xhr)
+                var x=shuju;
+                $.each(x.data, function (index, item){
+                    if(index%4===0){
+                        $('.col001').append('<img src='+ item.url +' " class="img-thumbnail">' );
+                    }else if(index%4===1){
+                        $('.col002').append('<img src='+ item.url +' " class="img-thumbnail">' );
+                    }else if(index%4===2){
+                        $('.col003').append('<img src='+ item.url +' " class="img-thumbnail">' );
+                        }else if(index%4===3){
+                        $('.col004').append('<img src='+ item.url +' " class="img-thumbnail">' );
+                        }
+                })
+            }
+            );
+            pagenum++;
+    }
+    </script>
+    
+</body>
+</html>
