@@ -13,3 +13,4 @@
  https://geroge-13.github.io/xiaoming.github.io/html+css/botton.html 按钮
 https://geroge-13.github.io/xiaoming.github.io/html+css/chart2.html 点击动画
 https://geroge-13.github.io/xiaoming.github.io/html+css/dom.html 动画移动
+https://geroge-13.github.io/xiaoming.github.io/html+css/zoom1.html 放大镜
